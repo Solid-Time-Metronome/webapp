@@ -1,11 +1,11 @@
 
 import TempoDropdown from '../tempoDropdown/tempoDropdown.components'
 import TimeSignatureDropdown from '../timeSignatureDropdown/timeSignatureDropdown.component'
-import './selectors.style.css'
+import './selectorsContainer.style.css'
 
-export default function Selectors () {
+export default function SelectorsContainer () {
     return(
-        <div className="container">
+        <div className="selectorsContainer">
             <TempoDropdown />
             <TimeSignatureDropdown />
         </div>

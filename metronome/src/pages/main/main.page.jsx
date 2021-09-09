@@ -1,10 +1,10 @@
 import React from "react";
 import Visualize from "../../components/visualize/visualize.component";
 import Logo from "../../components/logo/logo.component";
-import Selectors from "../../components/selectors/selectors.component";
 import ButtonContainer from "../../components/buttonContainer/buttonContainer.component";
 
 import './main.style.css';
+import SelectorsContainer from "../../components/selectorsContainer/selectorsContainer.component";
 
 export default function Main () {
     return (
@@ -12,7 +12,7 @@ export default function Main () {
         <Logo />
         <Visualize />
         <ButtonContainer />
-        <Selectors />
+        <SelectorsContainer />
       </div>  
     )
 }

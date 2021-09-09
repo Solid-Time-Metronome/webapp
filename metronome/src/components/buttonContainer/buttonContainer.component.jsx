@@ -4,7 +4,7 @@ import './buttonContainer.style.css';
 
 export default function ButtonContainer () {
     return (
-        <div className='container'>
+        <div className='buttonContainer'>
             <StartButton />
             <StopButton />
         </div>
