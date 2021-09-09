@@ -6,6 +6,8 @@ import TimeSignatureDropdown from "../../components/timeSignatureDropdown/timeSi
 import StartButton from "../../components/startButton/startButton.component";
 import StopButton from "../../components/stopButton/stopButton.component";
 
+import './main.style.css';
+
 export default function Main () {
     return (
         <div>

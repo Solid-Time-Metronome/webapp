@@ -1,0 +1,36 @@
+
+
+body {
+    display: flex;
+    direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+
+button {
+    background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA  51%, #1D2B64  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.1s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px rgb(165, 164, 164);
+    border-radius: 5%;
+}
+
+button:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none; 
+ }
+
+ button:active {
+     box-shadow: none;
+ }
