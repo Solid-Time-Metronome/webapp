@@ -1,10 +1,12 @@
 import './logo.style.css'
+import {ReactComponent as MetronomeLogo} from '../../assets/graphics/MetronomeLogo.svg';
 
 export default function Logo () {
     return (
         <>
-            <h1>Solid Time Metronome</h1>
-            <image>Logo</image>
+            <image className="metronomeContainer">
+                <MetronomeLogo />
+            </image>
         </>
     )
 }

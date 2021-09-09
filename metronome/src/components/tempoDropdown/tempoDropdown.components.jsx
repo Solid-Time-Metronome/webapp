@@ -6,6 +6,7 @@ export default function TempoDropdown () {
             <label>Tempo</label>
             <input 
                 type='number'
+                defaultValue='60'
             ></input>
         </>
     )
