@@ -1,0 +1,13 @@
+.visualizeContainer {
+	display: flex;
+    flex-direction: column;
+	margin-top: 35px;
+}
+
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}

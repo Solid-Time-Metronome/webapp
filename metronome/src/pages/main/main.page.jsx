@@ -11,7 +11,7 @@ export default function Main () {
       <div>
         <Logo />
         <Visualize />
-        <ButtonContainer />
+        
         <SelectorsContainer />
       </div>  
     )
