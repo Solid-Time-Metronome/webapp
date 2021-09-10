@@ -1,9 +1,13 @@
-import './startButton.style.css'
+import styles from "./startButton.module.css";
 
-export default function StartButton () {
-    return (
-        <>
-            <button>Start</button>
-        </>
-    )
-}
+const StartButton = ({onStartClick}) => {
+	return (
+		
+			<button onClick={onStartClick}
+            className={styles.btn}
+            >Start</button>
+		
+	);
+};
+
+export default StartButton;

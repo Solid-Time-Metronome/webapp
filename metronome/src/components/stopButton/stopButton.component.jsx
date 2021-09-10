@@ -1,9 +1,11 @@
-import './stopButton.style.css'
+import styles from "./stopButton.module.css";
 
-export default function StopButton () {
-    return (
-        <>
-            <button>Stop</button>
-        </>
-    )
-}
+const StopButton = ({ onStopClick }) => {
+	return (
+		<button onClick={onStopClick} className={styles.btn}>
+			Stop
+		</button>
+	);
+};
+
+export default StopButton;

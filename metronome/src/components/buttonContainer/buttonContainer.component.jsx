@@ -1,12 +1,14 @@
 import StartButton from '../startButton/startButton.component';
 import StopButton from '../stopButton/stopButton.component';
-import './buttonContainer.style.css';
+import styles from './buttonContainer.module.css';
 
-export default function ButtonContainer () {
+ const ButtonContainer =({onStartClick, onStopClick})=> {
     return (
-        <div className='buttonContainer'>
-            <StartButton />
-            <StopButton />
+        <div className={styles.buttonContainer}>
+            <StartButton onStartClick={onStartClick}/>
+            <StopButton onStopClick={onStopClick} />
         </div>
     )
 }
+
+export default ButtonContainer
