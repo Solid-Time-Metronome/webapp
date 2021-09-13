@@ -7,26 +7,35 @@ const Visualize = () => {
 	//starting blinking state
 	const [isActive, setIsActive] = useState(false); //timer state
 	const [isBlinking, setIsBlinking] = useState(false); //color change state
+	const [tempo, setTempo] = useState(60) // sets tempo (speed) of metronome.  
 
 	//need to figure out the math for the bpm and the duration of each beat.
 
 	const time = 1000; //current set to 1 sec
 
-	useEffect(() => {
+	// beats per minute (BPM) is how many beats in one minute, or 60 seconds / tempo
+	const BPM = (time * 60 ) / tempo
+	const playBeep = new Audio(audio)
+
+	
+
+	useEffect(() => { 
+
 		let id;
 
 		if (isActive === true) {
 			id = setInterval(() => {
-				//console.log(`${isBlinking}`);
-				setIsBlinking(!isBlinking); //toggle true and false
-				if (isBlinking === true) {
-					new Audio(audio).play();
-				}
-			}, time);
+				// console.log(`${isBlinking}`);
+				// setIsBlinking(!isBlinking); //toggle true and false
+				// if (isBlinking === true) {
+					playBeep.play();
+					console.log('beep')
+				// }
+			}, BPM);
 		}
 
-		return () => clearInterval(id);
-	}, [isActive, isBlinking]);
+		return () => clearInterval(id); // clears timer and stops metrnome
+	}, [isActive, BPM, playBeep, isBlinking]); 
 
 	//start timer function
 	const onStartClick = () => {
