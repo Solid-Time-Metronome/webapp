@@ -11,12 +11,8 @@ const Visualize = () => {
   const [isBlinking, setIsBlinking] = useState(false) // color change state
   const [tempo, setTempo] = useState(60) // sets tempo (speed) of metronome.
 
-  // need to figure out the math for the bpm and the duration of each beat.
-
-  const time = 1000 // current set to 1 sec
-
   // beats per minute (BPM) is how many beats in one minute, or 60 seconds / tempo
-  const BPM = (time * 60) / tempo
+  const BPM = (60000) / tempo
 
   useEffect(() => {
     let id
