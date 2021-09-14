@@ -4,63 +4,57 @@ import ButtonContainer from "../../components/buttonContainer/buttonContainer.co
 import audio from "../../assets/sounds/highClick.mp3";
 
 const Visualize = () => {
-	//starting blinking state
-	const [isActive, setIsActive] = useState(false); //timer state
-	const [isBlinking, setIsBlinking] = useState(false); //color change state
-	const [tempo, setTempo] = useState(60) // sets tempo (speed) of metronome.  
+  //starting blinking state
+  const [isActive, setIsActive] = useState(false); //timer state
+  const [isBlinking, setIsBlinking] = useState(false); //color change state
+  const [tempo, setTempo] = useState(60); // sets tempo (speed) of metronome.
 
-	//need to figure out the math for the bpm and the duration of each beat.
+  //need to figure out the math for the bpm and the duration of each beat.
 
-	const time = 1000; //current set to 1 sec
+  const time = 1000; //current set to 1 sec
 
-	// beats per minute (BPM) is how many beats in one minute, or 60 seconds / tempo
-	const BPM = (time * 60 ) / tempo
-	const playBeep = new Audio(audio)
+  // beats per minute (BPM) is how many beats in one minute, or 60 seconds / tempo
+  const BPM = (time * 60) / tempo;
 
-	
+  useEffect(() => {
+    // const playBeep = new Audio(audio)
 
-	useEffect(() => { 
+    let id;
 
-		let id;
+    if (isActive === true) {
+      id = setInterval(() => {
+        new Audio(audio).play();
+        setIsBlinking(!isBlinking);
+        console.log("beep");
+      }, BPM);
+    }
 
-		if (isActive === true) {
-			id = setInterval(() => {
-				// console.log(`${isBlinking}`);
-				// setIsBlinking(!isBlinking); //toggle true and false
-				// if (isBlinking === true) {
-					playBeep.play();
-					console.log('beep')
-				// }
-			}, BPM);
-		}
+    return () => clearInterval(id); // clears timer and stops metrnome
+  }, [isActive, BPM, isBlinking]);
 
-		return () => clearInterval(id); // clears timer and stops metrnome
-	}, [isActive, BPM, playBeep, isBlinking]); 
+  //start timer function
+  const onStartClick = () => {
+    console.log("start");
+    setIsActive(true);
+  };
+  //stop timer function
+  const onStopClick = () => {
+    console.log("stop");
+    setIsActive(false);
+  };
 
-	//start timer function
-	const onStartClick = () => {
-		console.log("start");
-		setIsActive(true);
-	};
-	//stop timer function
-	const onStopClick = () => {
-		console.log("stop");
-		setIsActive(false);
-	};
+  
 
-	return (
-		<>
-			<div className={styles.visualizeContainer}>
-				<h1 className={isBlinking ? `${styles.green}` : `${styles.red}`}>
-					Metronome Visualization
-				</h1>
-			</div>
-			<ButtonContainer
-				onStartClick={onStartClick}
-				onStopClick={onStopClick}
-			/>
-		</>
-	);
+  return (
+    <>
+      <div className={styles.visualizeContainer}>
+        <h1 className={isBlinking ? `${styles.green}` : `${styles.red}`}>
+          Metronome Visualization
+        </h1>
+      </div>
+      <ButtonContainer onStartClick={onStartClick} onStopClick={onStopClick} />
+    </>
+  );
 };
 
 export default Visualize;
