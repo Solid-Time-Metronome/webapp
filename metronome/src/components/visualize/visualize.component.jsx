@@ -2,6 +2,7 @@ import styles from "./visualize.module.css";
 import { useState, useEffect } from "react";
 import ButtonContainer from "../../components/buttonContainer/buttonContainer.component";
 import audio from "../../assets/sounds/highClick.mp3";
+import SelectorsContainer from "../selectorsContainer/selectorsContainer.component";
 
 const Visualize = () => {
   //starting blinking state
@@ -17,15 +18,12 @@ const Visualize = () => {
   const BPM = (time * 60) / tempo;
 
   useEffect(() => {
-    // const playBeep = new Audio(audio)
-
     let id;
 
     if (isActive === true) {
       id = setInterval(() => {
         new Audio(audio).play();
         setIsBlinking(!isBlinking);
-        console.log("beep");
       }, BPM);
     }
 
@@ -43,7 +41,14 @@ const Visualize = () => {
     setIsActive(false);
   };
 
-  
+  const onTempoSelect = () => {
+    console.log("onTempoSelect Function");
+	
+  };
+
+  const onBPMSelect = () => {
+    console.log("onBPMSelect");
+  };
 
   return (
     <>
@@ -53,6 +58,10 @@ const Visualize = () => {
         </h1>
       </div>
       <ButtonContainer onStartClick={onStartClick} onStopClick={onStopClick} />
+      <SelectorsContainer
+        onTempoSelect={onTempoSelect}
+        onBPMSelect={onBPMSelect}
+      />
     </>
   );
 };
