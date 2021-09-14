@@ -8,7 +8,7 @@ const Visualize = () => {
   //starting blinking state
   const [isActive, setIsActive] = useState(false); //timer state
   const [isBlinking, setIsBlinking] = useState(false); //color change state
-  const [tempo, setTempo] = useState(60); // sets tempo (speed) of metronome.
+  const [tempo] = useState(60); // sets tempo (speed) of metronome.
 
   //need to figure out the math for the bpm and the duration of each beat.
 
@@ -43,7 +43,6 @@ const Visualize = () => {
 
   const onTempoSelect = () => {
     console.log("onTempoSelect Function");
-	
   };
 
   const onBPMSelect = () => {
@@ -64,6 +63,6 @@ const Visualize = () => {
       />
     </>
   );
-};
+};;
 
 export default Visualize;
