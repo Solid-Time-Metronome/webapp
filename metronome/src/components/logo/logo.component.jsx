@@ -1,13 +1,12 @@
 import React from 'react'
-import './logo.style.css'
-import { ReactComponent as MetronomeLogo } from '../../assets/graphics/MetronomeLogo.svg'
+import styles from './logo.module.css'
+//import { ReactComponent as MetronomeLogo } from '../../assets/graphics/MetronomeLogo.svg'
+import MetronomeLogo from '../../assets/graphics/MetronomeLogo.svg'
 
-export default function Logo () {
-  return (
-        <>
-            <image className="metronomeContainer">
-                <MetronomeLogo />
-            </image>
-        </>
-  )
+export default function Logo() {
+   return (
+      <div>
+         <img className={styles.logo} src={MetronomeLogo} />
+      </div>
+   )
 }

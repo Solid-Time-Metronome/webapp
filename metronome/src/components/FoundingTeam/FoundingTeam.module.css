@@ -1,0 +1,45 @@
+.founderName {
+}
+
+@media screen and (max-width: 999px) {
+   .flexRow {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+   }
+}
+
+/* desktop view */
+@media screen and (min-width: 1000px) {
+   .flexRow {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+   }
+
+   .absolute {
+      position: absolute;
+      top: 50px;
+   }
+
+   .opacity {
+      opacity: 0.1;
+   }
+}
+
+.flexColumn {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.imgContainer {
+   position: relative;
+   padding: 10px;
+   max-width: 320px;
+}
