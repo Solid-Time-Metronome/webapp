@@ -10,6 +10,7 @@ const Visualize = () => {
   const [isActive, setIsActive] = useState(false) // timer state
   const [isBlinking, setIsBlinking] = useState(false) // color change state
   const [tempo, setTempo] = useState(60) // sets tempo (speed) of metronome.
+  const [measureLength, setMeasureLength] = useState(4)
 
   // beats per minute (BPM) is how many beats in one minute, or 60 seconds / tempo
   const BPM = (60000) / tempo
@@ -40,8 +41,10 @@ const Visualize = () => {
     setTempo(dropDownTempo)
   }
 
-  const onBPMSelect = () => {
-    console.log('onBPMSelect')
+  const onBPMSelect = (selectMeasure) => {
+    setMeasureLength(selectMeasure)
+    console.log('onBPMSelect', selectMeasure)
+    console.log('Measure Length', measureLength)
   }
 
   return (
