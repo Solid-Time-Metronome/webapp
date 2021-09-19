@@ -6,22 +6,22 @@ import { react, useState } from 'react'
 import propTypes from 'prop-types'
 
 const FoundingTeam = () => {
-   const [isClickMegan, setisClickMegan] = useState(false)
-   const onClickMegan = () => {
-      setisClickMegan(!isClickMegan)
-   }
+  const [isClickMegan, setisClickMegan] = useState(false)
+  const onClickMegan = () => {
+    setisClickMegan(!isClickMegan)
+  }
 
-   const [isClickJimmy, setisClickJimmy] = useState(false)
-   const onClickJImmy = () => {
-      setisClickJimmy(!isClickJimmy)
-   }
+  const [isClickJimmy, setisClickJimmy] = useState(false)
+  const onClickJImmy = () => {
+    setisClickJimmy(!isClickJimmy)
+  }
 
-   const [isClickGrant, setisClickGrant] = useState(false)
-   const onClickGrant = () => {
-      setisClickGrant(!isClickGrant)
-   }
+  const [isClickGrant, setisClickGrant] = useState(false)
+  const onClickGrant = () => {
+    setisClickGrant(!isClickGrant)
+  }
 
-   return (
+  return (
       <>
          <h1>FOUNDING TEAM</h1>
 
@@ -33,12 +33,14 @@ const FoundingTeam = () => {
                   className={isClickMegan ? styles.opacity : ''}
                />
 
-               {isClickMegan ? (
+               {isClickMegan
+                 ? (
                   <div className={styles.absolute}>
                      <p className={styles.founderName}>Megan, CTO</p>
                      <p>Write some stuff</p>
                   </div>
-               ) : null}
+                   )
+                 : null}
             </div>
 
             <div className={styles.imgContainer} onClick={onClickJImmy}>
@@ -48,12 +50,14 @@ const FoundingTeam = () => {
                   className={isClickJimmy ? styles.opacity : ''}
                />
 
-               {isClickJimmy ? (
+               {isClickJimmy
+                 ? (
                   <div className={styles.absolute}>
                      <p className={styles.founderName}>Jimmy, CTO</p>
                      <p>write some stuff later</p>
                   </div>
-               ) : null}
+                   )
+                 : null}
             </div>
 
             <div className={styles.imgContainer} onClick={onClickGrant}>
@@ -63,16 +67,18 @@ const FoundingTeam = () => {
                   className={isClickGrant ? styles.opacity : ''}
                />
 
-               {isClickGrant ? (
+               {isClickGrant
+                 ? (
                   <div className={styles.absolute}>
                      <p className={styles.founderName}>Grant, CEO</p>
                      <p>write some stuff</p>
                   </div>
-               ) : null}
+                   )
+                 : null}
             </div>
          </div>
       </>
-   )
+  )
 }
 
 export default FoundingTeam

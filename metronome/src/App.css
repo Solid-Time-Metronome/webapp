@@ -1,10 +1,4 @@
 
-/*global img tag css */
-img {
-	width: 100%;
-	height: auto;
-}
-
 body {
     display: flex;
     direction: column;
@@ -20,7 +14,11 @@ h1 {
     font-family: 'Lato', sans-serif;
 }
 
-
+/*global img tag css */
+img {
+	width: 100%;
+	height: auto;
+}
 button {background-image: linear-gradient(to right, #606c88 0%, #3f4c6b  51%, #606c88  100%)}
 button {
    margin: 10px;
