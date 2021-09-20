@@ -5,17 +5,17 @@ import styles from './buttonContainer.module.css'
 import PropTypes from 'prop-types'
 
 const ButtonContainer = ({ onStartClick, onStopClick }) => {
-  return (
-        <div className={styles.buttonContainer}>
-            <StartButton onStartClick={onStartClick}/>
-            <StopButton onStopClick={onStopClick} />
-        </div>
-  )
+   return (
+      <div className={styles.buttonContainer}>
+         <StartButton onStartClick={onStartClick} />
+         <StopButton onStopClick={onStopClick} />
+      </div>
+   )
 }
 
 ButtonContainer.propTypes = {
-  onStartClick: PropTypes.func,
-  onStopClick: PropTypes.func
+   onStartClick: PropTypes.func,
+   onStopClick: PropTypes.func,
 }
 
 export default ButtonContainer

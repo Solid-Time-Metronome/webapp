@@ -10,7 +10,9 @@ const Visualize = () => {
   const [isActive, setIsActive] = useState(false) // timer state
   const [isBlinking, setIsBlinking] = useState(false) // color change state
   const [tempo, setTempo] = useState(60) // sets tempo (speed) of metronome.
+
   const [countbeat, setCountbeat] = useState(0);
+
   // beats per minute (BPM) is how many beats in one minute, or 60 seconds / tempo
   const BPM = (60000) / tempo
 
@@ -19,6 +21,8 @@ const Visualize = () => {
 
     if (isActive === true) {
       id = setInterval(() => {
+
+
         
         new Audio(audio).play()
         setCountbeat(countbeat => (countbeat + 1))
@@ -28,6 +32,10 @@ const Visualize = () => {
 
     return () => clearInterval(id) // clears timer and stops metrnome
   }, [isActive, BPM, isBlinking])
+
+
+
+
 
   // start timer function
   const onStartClick = () => {
