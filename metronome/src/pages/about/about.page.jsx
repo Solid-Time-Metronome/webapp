@@ -1,0 +1,13 @@
+import FoundingTeam from '../../components/FoundingTeam/FoundingTeam.component'
+import useDocumentTitle from '../../Util/useDocumentTitle'
+
+const AboutPage = () => {
+  useDocumentTitle('About Us')
+  return (
+      <>
+         <FoundingTeam />
+      </>
+  )
+}
+
+export default AboutPage

@@ -1,0 +1,18 @@
+
+.showbeat{
+  color:red;
+  border-radius: 50%;
+  background: lightblue;
+  display: block;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  margin: 40px 120px;
+  padding:5px;
+}
+.small{
+  font-size: 0;
+}
+.big{
+  font-size: 75px;
+}
