@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import styles from './Nav.module.css'
 import { NavLink } from 'react-router-dom'
 // import LogoHeader from '../Images/LogoHeader.svg';
 const HeaderContent = () => {
-   const [isActive, setIsActive] = useState(false)
+  const [isActive, setIsActive] = useState(false)
 
-   function toggleButton() {
-      setIsActive(!isActive)
-      console.log(isActive)
-   }
+  function toggleButton () {
+    setIsActive(!isActive)
+    console.log(isActive)
+  }
 
-   return (
+  return (
       <nav className={styles.navbar}>
          {/* <div className={styles.navLogo}>
         <NavLink to="/" className={styles.logoLink}>
@@ -50,7 +50,7 @@ const HeaderContent = () => {
             </div>
          </div>
       </nav>
-   )
+  )
 }
 
 export default HeaderContent
