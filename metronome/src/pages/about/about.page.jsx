@@ -5,9 +5,9 @@ import useDocumentTitle from '../../Util/useDocumentTitle'
 const AboutPage = () => {
   useDocumentTitle('About Us')
   return (
-      <>
+      <section>
          <FoundingTeam />
-      </>
+      </section>
   )
 }
 

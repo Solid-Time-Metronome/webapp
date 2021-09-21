@@ -11,7 +11,7 @@ const HeaderContent = () => {
    }
 
    return (
-      <nav className={styles.navbar}>
+      <section className={styles.navbar}>
          {/* <div className={styles.navLogo}>
         <NavLink to="/" className={styles.logoLink}>
           <img src={LogoHeader} alt="logo header" />
@@ -49,7 +49,7 @@ const HeaderContent = () => {
                </ul>
             </div>
          </div>
-      </nav>
+      </section>
    )
 }
 
