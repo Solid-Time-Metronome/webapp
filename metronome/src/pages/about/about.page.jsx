@@ -1,4 +1,3 @@
-import React from 'react'
 import FoundingTeam from '../../components/FoundingTeam/FoundingTeam.component'
 import useDocumentTitle from '../../Util/useDocumentTitle'
 
