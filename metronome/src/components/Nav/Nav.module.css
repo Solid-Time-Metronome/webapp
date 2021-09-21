@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  position: relative;
+  position: top;
   justify-content: flex-start;
   align-items: flex-start;
   color: #555;
