@@ -6,9 +6,9 @@ import Logo from '../../components/logo/logo.component'
 
 export default function Main() {
    return (
-      <div>
+      <section>
          <Logo />
          <Visualize />
-      </div>
+      </section>
    )
 }

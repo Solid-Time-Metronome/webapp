@@ -5,7 +5,7 @@ import MetronomeLogo from '../../assets/graphics/MetronomeLogo.svg'
 
 export default function Logo() {
    return (
-      <div>
+      <div className={styles.logocontainer}>
          <img className={styles.logo} src={MetronomeLogo} />
       </div>
    )
