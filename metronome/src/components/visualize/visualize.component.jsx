@@ -1,4 +1,3 @@
-
 import styles from './visualize.module.css'
 import { React, useState, useEffect } from 'react'
 import ButtonContainer from '../../components/buttonContainer/buttonContainer.component'
@@ -60,7 +59,7 @@ const Visualize = () => {
 
   return (
     <>
-      <ShowBeats countbeat={countbeat} BPM={BPM}/>
+      <ShowBeats countbeat={countbeat}/>
       <div className={styles.visualizeContainer}>
         <h1 className={isBlinking ? `${styles.green}` : `${styles.red}`}>
           Metronome Visualization
