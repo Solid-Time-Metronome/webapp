@@ -1,14 +1,12 @@
 import { useState } from 'react'
 import styles from './Nav.module.css'
 import { NavLink } from 'react-router-dom'
-// import LogoHeader from '../Images/LogoHeader.svg';
 const HeaderContent = () => {
   const [isActive, setIsActive] = useState(false)
 
-  function toggleButton () {
-    setIsActive(!isActive)
-    console.log(isActive)
-  }
+  //   function toggleButton () {
+  //     setIsActive(!isActive)
+  //   }
 
   return (
       <section className={styles.navbar}>
@@ -16,11 +14,14 @@ const HeaderContent = () => {
         <NavLink to="/" className={styles.logoLink}>
           <img src={LogoHeader} alt="logo header" />
         </NavLink>
-      </div> */}
+        <NavLink to="/" className={styles.brandTitle}>
+          <h3 className="brandTitle">Solid Time Metronome</h3>
+        </NavLink>
+         </div> */}
 
          {/* hamburger button */}
          <div>
-            <NavLink
+            {/* <NavLink
                to='#'
                className={styles.toggleButton}
                onClick={toggleButton}
@@ -28,7 +29,7 @@ const HeaderContent = () => {
                <span className={styles.bar}></span>
                <span className={styles.bar}></span>
                <span className={styles.bar}></span>
-            </NavLink>
+            </NavLink> */}
 
             <div
                className={`${styles.navbarLinks} ${
