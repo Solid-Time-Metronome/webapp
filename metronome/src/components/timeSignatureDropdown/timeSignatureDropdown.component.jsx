@@ -1,22 +1,23 @@
-import './timeSignatureDropdown.style.css'
-import React from 'react'
+import styles from './timeSignatureDropdown.module.css'
 import PropTypes from 'prop-types'
 
 export default function TimeSignatureDropdown ({ onBPMSelect }) {
+  let selectMeasure
   return (
-    <>
-      <label>Beats Per Measure</label>
-      <select onInput={onBPMSelect}>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-      </select>
-    </>
+    <section className={styles.wrapper}>
+      <label>Select Beats Per Measure:  </label>
+      <input
+        type='number'
+        defaultValue='4'
+        min='1'
+        max='16'
+        onInput={ (e) => {
+          e.preventDefault()
+          selectMeasure = e.target.value
+          onBPMSelect(selectMeasure)
+        }}
+      ></input>
+    </section>
   )
 }
 

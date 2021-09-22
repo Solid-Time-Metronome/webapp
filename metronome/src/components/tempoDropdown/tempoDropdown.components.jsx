@@ -1,25 +1,23 @@
-import React from 'react'
-import './tempoDropdown.style.css'
+import styles from './tempoDropdown.module.css'
 import PropTypes from 'prop-types'
 
 export default function TempoDropdown ({ onTempoSelect }) {
   let dropDownTempo
   return (
-      <>
-            <label>Tempo</label>
-            <input
-                type='number'
-                defaultValue='60'
-                onInput={ (e) => {
-                  e.preventDefault()
-                  dropDownTempo = e.target.value
-                  console.log('e', e)
-                  console.log(dropDownTempo)
-                  onTempoSelect(dropDownTempo)
-                }}
-                // onInput={ onTempoSelect }
-            ></input>
-        </>
+    <section className={styles.tempo}>
+      <label>Select Tempo:  </label>
+      <input
+        type="number"
+        defaultValue="100"
+        min="40"
+        max="300"
+        onInput={(e) => {
+          e.preventDefault()
+          dropDownTempo = e.target.value
+          onTempoSelect(dropDownTempo)
+        }}
+      ></input>
+    </section>
   )
 }
 
