@@ -52,7 +52,7 @@ const Visualize = () => {
 
   return (
     <>
-      <ShowBeats countbeat={countbeat}/>
+      <ShowBeats countbeat={countbeat} beats={measureLength}/>
       <div className={styles.visualizeContainer}>
         <h1 className={isBlinking ? `${styles.green}` : `${styles.red}`}>
           Metronome Visualization
