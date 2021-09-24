@@ -6,6 +6,7 @@ import SelectorsContainer from '../selectorsContainer/selectorsContainer.compone
 import ShowBeats from '../showBeats/showBeats.component'
 const Visualize = () => {
   // starting blinking state
+  const [currentaudio] = useState(new Audio(audio));
   const [isActive, setIsActive] = useState(false) // timer state
   const [isBlinking, setIsBlinking] = useState(false) // color change state
   const [tempo, setTempo] = useState(60) // sets tempo (speed) of metronome.
@@ -21,7 +22,7 @@ const Visualize = () => {
 
     if (isActive === true) {
       id = setInterval(() => {
-        new Audio(audio).play()
+        currentaudio.play()
         setCountbeat(countbeat => (countbeat + 1))
         setIsBlinking(!isBlinking)
       }, BPM)
