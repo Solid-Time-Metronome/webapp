@@ -31,14 +31,14 @@ const Visualize = () => {
   }, [isActive, BPM, isBlinking])
 
   // start timer function
-  const onStartClick = () => {
-    setIsActive(true)
+  const onToggleClick = () => {
+    setIsActive(!isActive)
   }
   // stop timer function
-  const onStopClick = () => {
-    setIsActive(false)
-    setCountbeat(0)
-  }
+  // const onStopClick = () => {
+  //   setIsActive(false)
+  //   setCountbeat(0)
+  // }
 
   const onTempoSelect = (dropDownTempo) => {
     setTempo(dropDownTempo)
@@ -58,7 +58,7 @@ const Visualize = () => {
           Metronome Visualization
         </h1>
       </div>
-      <ButtonContainer onStartClick={onStartClick} onStopClick={onStopClick} />
+      <ButtonContainer onToggleClick={onToggleClick}/>
       <SelectorsContainer
         onTempoSelect={onTempoSelect}
         onBPMSelect={onBPMSelect}
