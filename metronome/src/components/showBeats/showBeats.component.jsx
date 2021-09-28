@@ -1,8 +1,7 @@
 import styles from './showBeats.module.css'
 import PropTypes from 'prop-types'
 export default function ShowBeats ({ countbeat, beats }) {
-  beats = 6// should be the input
-  const overlaydata = [...Array(beats).keys()]
+  const overlaydata = [...Array(parseInt(beats)).keys()]
   const cleanBeat = Math.floor(countbeat)
   const measureBeat = ((cleanBeat - 1) % beats) + 1
   const topdata = []
