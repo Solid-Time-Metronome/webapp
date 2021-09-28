@@ -6,8 +6,7 @@
   grid-gap: 1px;
  
 }
-.overlay1{
-  
+.overlay1{ 
   z-index: 1; 
 }
 
@@ -15,7 +14,6 @@
 .overlay2 {
   grid-column: 1; 
   grid-row: 1; 
-  
 }
 .showbeat1,
 .showbeat2{
@@ -31,6 +29,7 @@
 
 .showbeat1{
   background: #606c88; 
+  
 }
 .showbeat2{
   background: lightblue;
