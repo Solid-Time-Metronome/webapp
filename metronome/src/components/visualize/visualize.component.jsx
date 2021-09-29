@@ -61,7 +61,7 @@ const Visualize = () => {
         </h1>
       </div>
       <ButtonContainer onToggleClick={onToggleClick}/>
-      <Volume beats={measureLength} currentvolume={currentvolume} setCurrentvolume={setCurrentvolume}/>
+      <Volume beats={measureLength} setCurrentvolume={setCurrentvolume}/>
       <SelectorsContainer
         onTempoSelect={onTempoSelect}
         onBPMSelect={onBPMSelect}
