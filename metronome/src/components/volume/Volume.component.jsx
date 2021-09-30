@@ -6,7 +6,10 @@ export default function Volume ({ setCurrentvolume, beats }) {
     <div className={styles.volumewrapper}>
       <div >
         {voulumeArr.map((item) => (
-          <input className={styles.volumes}type='range'min='0'max='1'step='0.1'key={item}defaultValue='0.5'onChange={(e) => setCurrentvolume(e.target.value)}/>
+          <input className={styles.volumes}type='range'min='0'max='10'step='1'key={item}defaultValue='5'
+          name={`currentvolume${item}`}
+          onChange={(e) => setCurrentvolume(prevState => ({ ...prevState, [e.target.name]: e.target.value }))}
+          />
         ))}
       </div>
     </div>
