@@ -4,9 +4,10 @@
   grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: 50px;
   grid-gap: 1px;
-  align-items:center;
+ 
+  
 }
-.overlay1{
+.overlay1{ 
   z-index: 1; 
 }
 
@@ -28,6 +29,7 @@
 
 .showbeat1{
   background: #606c88; 
+  
 }
 .showbeat2{
   /* background: lightblue; */

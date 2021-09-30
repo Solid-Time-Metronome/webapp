@@ -1,0 +1,15 @@
+.volumewrapper{
+  width:fit-content;
+  height:auto;
+  display: flex;
+  justify-content: center;
+  background:lightgrey;
+   
+}
+.volumes{
+  height:5em;
+  width:5em;
+  -webkit-transform: rotate(-90deg); 
+  -moz-transform: rotate(-90deg); 
+
+}
