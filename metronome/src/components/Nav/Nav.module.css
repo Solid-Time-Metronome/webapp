@@ -55,7 +55,7 @@
   position: absolute;
   top: 0.75rem;
   right: 1rem;
-  display: none;
+  /* display: none; */
   flex-direction: column;
   justify-content: space-around;
   width: 30px;
@@ -73,8 +73,9 @@
 }
 
 .navUl li .active{
-  color: #da9388;
-  border-bottom: solid 2px rgb(4, 81, 22);
+  font-size: larger;
+  font-weight: bold;
+  border-bottom: solid 2px rgba(171, 182, 173, 0.2);
 }
 
 @media (max-width: 800px) {
@@ -86,6 +87,9 @@
 
   .toggleButton {
     display: flex;
+    color:black;
+    display: visible;
+
   }
 
   .navbarLinks {
