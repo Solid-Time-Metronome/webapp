@@ -3,10 +3,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function TimeSignatureDropdown ({ onBPMSelect }) {
+  let selectMeasure
   return (
     <>
       <label>Beats Per Measure</label>
-      <select onInput={onBPMSelect}>
+      <select onInput={ (e) => {
+        e.preventDefault()
+        selectMeasure = e.target.value
+        onBPMSelect(selectMeasure)
+      }}>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>

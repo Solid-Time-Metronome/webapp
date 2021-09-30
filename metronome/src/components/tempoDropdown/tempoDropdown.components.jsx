@@ -13,8 +13,6 @@ export default function TempoDropdown ({ onTempoSelect }) {
                 onInput={ (e) => {
                   e.preventDefault()
                   dropDownTempo = e.target.value
-                  console.log('e', e)
-                  console.log(dropDownTempo)
                   onTempoSelect(dropDownTempo)
                 }}
                 // onInput={ onTempoSelect }
