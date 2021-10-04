@@ -2,8 +2,8 @@ import styles from './FoundingTeam.module.css'
 import megan from '../../assets/graphics/megan.jpg'
 import grant from '../../assets/graphics/grant.jpg'
 import jimmy from '../../assets/graphics/jimmy.jpg'
-import React, { useState } from 'react'
-//import { react, useState } from 'react'
+import { useState } from 'react'
+// import { react, useState } from 'react'
 import propTypes from 'prop-types'
 
 const FoundingTeam = () => {

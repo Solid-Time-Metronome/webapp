@@ -1,5 +1,3 @@
-import React from 'react'
-import './tempoDropdown.style.css'
 import PropTypes from 'prop-types'
 
 export default function TempoDropdown ({ onTempoSelect }) {

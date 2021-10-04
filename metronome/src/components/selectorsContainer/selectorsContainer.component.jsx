@@ -1,4 +1,3 @@
-import React from 'react'
 import TempoDropdown from '../tempoDropdown/tempoDropdown.components'
 import TimeSignatureDropdown from '../timeSignatureDropdown/timeSignatureDropdown.component'
 import './selectorsContainer.style.css'

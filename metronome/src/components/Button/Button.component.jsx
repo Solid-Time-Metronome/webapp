@@ -1,5 +1,4 @@
-import styles from './Button.module.css'
-import { React, useState } from 'react'
+import { useState } from 'react'
 import PropTypes from 'prop-types'
 
 const Button = ({ onToggleClick }) => {
@@ -15,7 +14,7 @@ const Button = ({ onToggleClick }) => {
   }
 
   return (
-    <button onClick={onClick} className={styles.btn}>
+    <button onClick={onClick}>
       {btnText}
     </button>
   )
