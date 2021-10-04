@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom'
 const HeaderContent = () => {
   const [isActive, setIsActive] = useState(false)
 
-  function toggleButton () {
-    setIsActive(!isActive)
-  }
+  // function toggleButton () {
+  //   setIsActive(!isActive)
+  // }
 
   return (
     <section className={styles.navbar}>
