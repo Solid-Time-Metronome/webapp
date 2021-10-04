@@ -21,11 +21,11 @@ const HeaderContent = () => {
 
       {/* hamburger button */}
       <div>
-        <NavLink to="#" className={styles.toggleButton} onClick={toggleButton}>
+        {/* <NavLink to="#" className={styles.toggleButton} onClick={toggleButton}>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>
-        </NavLink>
+        </NavLink> */}
 
         <div
           className={`${styles.navbarLinks} ${isActive ? styles.active : ''}`}
