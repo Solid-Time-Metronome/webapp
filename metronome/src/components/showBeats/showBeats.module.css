@@ -14,18 +14,16 @@
 .overlay1,
 .overlay2 {
   grid-column: 1; 
-  grid-row: 1; 
-  
+  grid-row: 1;  
 }
 .showbeat1,
 .showbeat2{
-
   border-radius: 50%;
   display: inline-block;
-
+  align-items: center;
   height: 35px;
   width: 35px;
-  margin: 1px;
+  margin: 5px;
   padding:5px;
 }
 
@@ -34,7 +32,8 @@
   
 }
 .showbeat2{
-  background: lightblue;
+  /* background: lightblue; */
+  border: 1px #606c88 solid;
 }
 
 

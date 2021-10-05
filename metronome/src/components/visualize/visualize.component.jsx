@@ -7,14 +7,14 @@ import ShowBeats from '../showBeats/showBeats.component'
 import Volume from '../volume/Volume.component'
 const Visualize = () => {
   // starting blinking state
-  const [currentaudio] = useState(new Audio(audio));
+  const [currentaudio] = useState(new Audio(audio))
   const [isActive, setIsActive] = useState(false) // timer state
   const [isBlinking, setIsBlinking] = useState(false) // color change state
   const [tempo, setTempo] = useState(60) // sets tempo (speed) of metronome.
   const [measureLength, setMeasureLength] = useState(4)
   const [countbeat, setCountbeat] = useState(0)
   const [currentvolume, setCurrentvolume] = useState(0.5)
-  
+
   // beats per minute (BPM) is how many beats in one minute, or 60 seconds / tempo
   const BPM = (60000) / tempo
 
@@ -23,7 +23,7 @@ const Visualize = () => {
     if (isActive === true) {
       id = setInterval(() => {
         currentaudio.play()
-        currentaudio.volume=currentvolume
+        currentaudio.volume = currentvolume
         setCountbeat(countbeat => (countbeat + 1))
         setIsBlinking(!isBlinking)
       }, BPM)
