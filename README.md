@@ -1,2 +1,5 @@
 # Solid Time Metronome - Web App
-A metronome web app built with React
+
+Developers - create a .env file and add this line of code:
+ESLINT_NO_DEV_ERRORS=true
+
