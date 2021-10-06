@@ -9,6 +9,13 @@
   font-size: 30px;
 }
 
+@media screen and (max-width: 667px) {
+  .visualizeContainer {
+    margin-top: -230px;
+  margin-bottom: 200px;
+  }
+}
+
 .red {
 	color: red;
 }
