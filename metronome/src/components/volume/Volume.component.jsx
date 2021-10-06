@@ -1,7 +1,7 @@
 import styles from './Volume.module.css'
 import PropTypes from 'prop-types'
 import { useState, useEffect } from 'react'
-export default function Volume({ countbeat, beats, setCurrentvolume }) {
+export default function Volume({ countbeat, beats, setCurrentvolume, currentvolume }) {
   const [instantVolume, setInstantVolume] = useState({ currentvolume0: 5 })
   const voulumeArr = [...Array(parseInt(beats)).keys()]
   const cleanBeat = Math.floor(countbeat)
@@ -15,9 +15,10 @@ export default function Volume({ countbeat, beats, setCurrentvolume }) {
         setCurrentvolume(Object.values(instantVolume)[0] / 10)
       }
     }
-  }, [countbeat, beats])
+  }, [countbeat, instantVolume])
   return (
     <form className={styles.volumewrapper}>
+
       {voulumeArr.map((item) => (
         <input
           className={styles.volumes}
@@ -27,6 +28,7 @@ export default function Volume({ countbeat, beats, setCurrentvolume }) {
           step='1'
           key={item}
           defaultValue='5'
+          value={Object.values(instantVolume)[item]}
           name={`currentvolume${item}`}
           onChange={(e) => setInstantVolume(prevState => ({ ...prevState, [e.target.name]: e.target.value }))}
         />
