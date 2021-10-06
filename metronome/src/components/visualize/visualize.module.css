@@ -1,7 +1,12 @@
 .visualizeContainer {
 	display: flex;
-    flex-direction: column;
-	margin-top: 35px;
+  flex-direction: column;
+	margin-top: -270px;
+  margin-bottom: 270px;
+  
+}
+.visualizeContainer h1{
+  font-size: 30px;
 }
 
 .red {
