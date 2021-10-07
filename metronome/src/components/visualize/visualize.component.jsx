@@ -12,7 +12,7 @@ const Visualize = () => {
   const [tempo, setTempo] = useState(60) // sets tempo (speed) of metronome.
   const [measureLength, setMeasureLength] = useState(4)
   const [countbeat, setCountbeat] = useState(0)
-  const initialVolume = [0.5]
+  const initialVolume = 0.5
   const [currentvolume, setCurrentvolume] = useState(initialVolume)
   // beats per minute (BPM) is how many beats in one minute, or 60 seconds / tempo
   const BPM = (60000) / tempo
@@ -44,7 +44,7 @@ const Visualize = () => {
 
   const onBPMSelect = (selectMeasure) => {
     setMeasureLength(selectMeasure)
-    setCurrentvolume([...initialVolume])
+    setCurrentvolume(initialVolume)
     console.log('onBPMSelect', selectMeasure)
     console.log('Measure Length', measureLength)
   }
@@ -56,11 +56,14 @@ const Visualize = () => {
           Metronome Visualization
         </h1>
       </div>
-      <Volume beats={parseInt(measureLength)} countbeat={countbeat} setCurrentvolume={setCurrentvolume} currentvolume={currentvolume} />
-
+      <Volume
+        beats={parseInt(measureLength)}
+        countbeat={countbeat}
+        setCurrentvolume={setCurrentvolume}
+        currentvolume={currentvolume}
+      />
 
       <ButtonContainer onToggleClick={onToggleClick} />
-
       <SelectorsContainer
         onTempoSelect={onTempoSelect}
         onBPMSelect={onBPMSelect}
