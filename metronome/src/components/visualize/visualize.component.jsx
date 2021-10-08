@@ -1,15 +1,15 @@
 import styles from './visualize.module.css'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import ButtonContainer from '../../components/buttonContainer/buttonContainer.component'
 import audio from '../../assets/sounds/highClick.mp3'
 import SelectorsContainer from '../selectorsContainer/selectorsContainer.component'
 import Volume from '../volume/Volume.component'
 const Visualize = () => {
   // starting blinking state
-  const [currentaudio] = useState(new Audio(audio));
+  const [currentaudio] = useState(new Audio(audio))
   const [isActive, setIsActive] = useState(false) // timer state
   const [isBlinking, setIsBlinking] = useState(false) // color change state
-  const [tempo, setTempo] = useState(60) // sets tempo (speed) of metronome.
+  const [tempo, setTempo] = useState(100) // sets tempo (speed) of metronome.
   const [measureLength, setMeasureLength] = useState(4)
   const [countbeat, setCountbeat] = useState(0)
   const initialVolume = 0.5
@@ -52,8 +52,8 @@ const Visualize = () => {
   return (
     <>
       <div className={styles.visualizeContainer}>
-        <h1 className={isBlinking ? `${styles.green}` : `${styles.red}`}>
-          Metronome Visualization
+        <h1 className={isBlinking ? `${styles.black}` : `${styles.grey}`}>
+          Solid Time Metronome
         </h1>
       </div>
       <Volume

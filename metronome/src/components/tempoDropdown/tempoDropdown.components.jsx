@@ -8,7 +8,7 @@ export default function TempoDropdown ({ onTempoSelect }) {
             <label>Tempo</label>
             <input
                 type='number'
-                defaultValue='60'
+                defaultValue='100'
                 onInput={ (e) => {
                   e.preventDefault()
                   dropDownTempo = e.target.value
