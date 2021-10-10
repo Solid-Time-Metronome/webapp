@@ -1,25 +1,24 @@
 import styles from './visualize.module.css'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import ButtonContainer from '../../components/buttonContainer/buttonContainer.component'
 import audio from '../../assets/sounds/highClick.mp3'
 import SelectorsContainer from '../selectorsContainer/selectorsContainer.component'
 import Volume from '../volume/Volume.component'
 const Visualize = () => {
   // starting blinking state
-  const [currentaudio] = useState(new Audio(audio));
+  const [currentaudio] = useState(new Audio(audio))
   const [isActive, setIsActive] = useState(false) // timer state
   const [isBlinking, setIsBlinking] = useState(false) // color change state
   const [tempo, setTempo] = useState(60) // sets tempo (speed) of metronome.
   const [measureLength, setMeasureLength] = useState(4)
   const [countbeat, setCountbeat] = useState(0)
-  const initialVolume = 0.5
-  const [currentvolume, setCurrentvolume] = useState(initialVolume)
+  const [currentvolume, setCurrentvolume] = useState(0.5)
+  const [instantVolume, setInstantVolume] = useState({ currentvolume0: 5 })
   // beats per minute (BPM) is how many beats in one minute, or 60 seconds / tempo
   const BPM = (60000) / tempo
 
   useEffect(() => {
     let id
-
     if (isActive === true) {
       id = setInterval(() => {
         currentaudio.play()
@@ -44,7 +43,7 @@ const Visualize = () => {
 
   const onBPMSelect = (selectMeasure) => {
     setMeasureLength(selectMeasure)
-    setCurrentvolume(initialVolume)
+    setInstantVolume({ currentvolume0: 5 })
     console.log('onBPMSelect', selectMeasure)
     console.log('Measure Length', measureLength)
   }
@@ -61,6 +60,8 @@ const Visualize = () => {
         countbeat={countbeat}
         setCurrentvolume={setCurrentvolume}
         currentvolume={currentvolume}
+        instantVolume={instantVolume}
+        setInstantVolume={setInstantVolume}
       />
 
       <ButtonContainer onToggleClick={onToggleClick} />
