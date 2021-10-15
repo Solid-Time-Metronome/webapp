@@ -44,6 +44,9 @@ const Visualize = () => {
   const onBPMSelect = (selectMeasure) => {
     setMeasureLength(selectMeasure)
     setInstantVolume({ currentvolume0: 5 })
+    Array.from(document.querySelectorAll("input[type=range]")).forEach(
+      input => (input.value = 5)
+    );
     console.log('onBPMSelect', selectMeasure)
     console.log('Measure Length', measureLength)
   }
