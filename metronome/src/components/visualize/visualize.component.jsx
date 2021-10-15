@@ -23,7 +23,6 @@ const Visualize = () => {
       id = setInterval(() => {
         currentaudio.play()
         currentaudio.volume = currentvolume
-        console.log(currentvolume)
         setCountbeat(countbeat => (countbeat + 1))
         setIsBlinking(!isBlinking)
       }, BPM)
