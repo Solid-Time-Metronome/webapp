@@ -12,19 +12,17 @@ const Visualize = () => {
   const [tempo, setTempo] = useState(100) // sets tempo (speed) of metronome.
   const [measureLength, setMeasureLength] = useState(4)
   const [countbeat, setCountbeat] = useState(0)
-  const initialVolume = 0.5
-  const [currentvolume, setCurrentvolume] = useState(initialVolume)
+  const [currentvolume, setCurrentvolume] = useState(0.5)
+  const [instantVolume, setInstantVolume] = useState({ currentvolume0: 5 })
   // beats per minute (BPM) is how many beats in one minute, or 60 seconds / tempo
   const BPM = (60000) / tempo
 
   useEffect(() => {
     let id
-
     if (isActive === true) {
       id = setInterval(() => {
         currentaudio.play()
         currentaudio.volume = currentvolume
-        console.log(currentvolume)
         setCountbeat(countbeat => (countbeat + 1))
         setIsBlinking(!isBlinking)
       }, BPM)
@@ -44,7 +42,10 @@ const Visualize = () => {
 
   const onBPMSelect = (selectMeasure) => {
     setMeasureLength(selectMeasure)
-    setCurrentvolume(initialVolume)
+    setInstantVolume({ currentvolume0: 5 })
+    Array.from(document.querySelectorAll("input[type=range]")).forEach(
+      input => (input.value = 5)
+    );
     console.log('onBPMSelect', selectMeasure)
     console.log('Measure Length', measureLength)
   }
@@ -61,6 +62,8 @@ const Visualize = () => {
         countbeat={countbeat}
         setCurrentvolume={setCurrentvolume}
         currentvolume={currentvolume}
+        instantVolume={instantVolume}
+        setInstantVolume={setInstantVolume}
       />
 
       <ButtonContainer onToggleClick={onToggleClick} />
