@@ -47,6 +47,11 @@ const HeaderContent = () => {
                         About
                      </NavLink>
                   </li>
+                  <li onClick={(e) => setIsActive(false)}>
+                     <NavLink to='/contact' activeClassName={styles.active}>
+                        Contact
+                     </NavLink>
+                  </li>
                </ul>
             </div>
          </div>
