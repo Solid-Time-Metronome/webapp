@@ -1,4 +1,4 @@
-import Card from './Card'
+import CardData from './CardData'
 import styles from './FoundingTeam.module.css'
 
 const FoundingTeam = () => {
@@ -20,9 +20,9 @@ const FoundingTeam = () => {
   return (
     <>
       <h1 className={styles.h1}>FOUNDING TEAM</h1>
-      <Card user='gvanbo' name='Grant van Boeschoten'/>
-      <Card user='kyo6919' name='Jimmy Tan'/>
-      <Card user='xumegan' name='Megan Xu'/>
+      <CardData user='gvanbo' name='Grant van Boeschoten'/>
+      <CardData user='kyo6919' name='Jimmy Tan'/>
+      <CardData user='xumegan' name='Megan Xu'/>
 
       {/* <div className={styles.flexRow}>
         <div className={styles.imgContainer} onClick={onClickMegan}>
