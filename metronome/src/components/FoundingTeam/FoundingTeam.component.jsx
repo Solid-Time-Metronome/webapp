@@ -21,8 +21,8 @@ const FoundingTeam = () => {
     <>
       <h1 className={styles.h1}>FOUNDING TEAM</h1>
       <Card user='gvanbo' name='Grant van Boeschoten'/>
-      <Card user='xumegan' name='Megan Xu'/>
       <Card user='kyo6919' name='Jimmy Tan'/>
+      <Card user='xumegan' name='Megan Xu'/>
 
       {/* <div className={styles.flexRow}>
         <div className={styles.imgContainer} onClick={onClickMegan}>
