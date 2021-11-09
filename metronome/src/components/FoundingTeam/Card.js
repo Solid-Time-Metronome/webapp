@@ -7,11 +7,19 @@ const Card = ({ user, name }) => {
   const [data, setData] = useState(null)
 
   useEffect(() => {
-    fetch(`https://api.github.com/users/${user}`)
-      .then((response) => response.json())
-      .then(setData)
-      .catch(err => (console.log('error', err)))
-  }, [name, data])
+    fetch('https://api.github.com/users/{user}')
+      .then(response => response.json()) //Converting the response to a JSON object
+      .then(data => document.body.append())
+      .catch(error => console.error(error));
+    // fetch(`https://api.github.com/users/${user}`)
+    //   .then((response) => {
+    //     // response.json()
+    //     console.log('response')
+    //   }
+    //   )
+    //   .then(setData(response.json()))
+    //   .catch(err => (console.log('error', err)))
+  }, [])
 
   console.log(data)
 
@@ -21,7 +29,7 @@ const Card = ({ user, name }) => {
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
         <p className="card-text">
-          {data.bio}
+          {/* {data.bio} */}
         </p>
         <a href="" className="btn btn-outline-primary">
           GitHub
@@ -37,3 +45,4 @@ Card.propTypes = {
   user: PropTypes.string,
   name: PropTypes.string
 }
+
