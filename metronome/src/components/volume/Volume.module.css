@@ -9,7 +9,9 @@
   box-shadow: 1px 1px 2px 2px rgb(194, 198, 218); 
   transition: 0.7s all ease-in; 
 }
-
+const filteredData = APIData.filter((item) => {
+  return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
+})
 .volumes{
   height:5em;
   width:5em;
